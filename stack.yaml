@@ -1,0 +1,7 @@
+extra-include-dirs:
+- /usr/local/include
+extra-lib-dirs:
+- /usr/local/lib
+packages:
+- .
+resolver: nightly-2017-10-31
