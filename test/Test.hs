@@ -58,7 +58,7 @@ tests = sequence $ map join
 main :: IO ()
 main = do
   initialize
-  Counts {..} <- runTestTT . TestList <=< replicateM 1000 $ TestList . concat <$> tests
+  Counts {..} <- runTestTT . TestList <=< replicateM 10 $ TestList . concat <$> tests
   exitWith $ case failures + errors of
     0 -> ExitSuccess
     _ -> ExitFailure 1
